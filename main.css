@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-section {
+  padding: 70px 0px;
+  background: #212121;
+  color: #fff;
+}
+.service-section .service-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.service-section .service-title h2 {
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  padding: 15px;
+}
+.service-section .service-title h2 span {
+  color: #ff6200;
+}
+.service-section .service-title h2::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 150px;
+  background: #ff6200;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.service-section .service-title h2::after {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 70px;
+  background: #ff6200;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.service-section .service-title p {
+  text-align: center;
+  max-width: 800px;
+  line-height: 1.5em;
+}
+.service-section .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.service-section .row .service-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #2c2c2c;
+  padding: 40px 20px;
+  gap: 20px;
+  flex: 0 1 350px;
+  max-width: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.service-section .row .service-card > * {
+  z-index: 1;
+}
+.service-section .row .service-card .icon {
+  width: 60px;
+  height: 60px;
+  background: #ff6200;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.service-section .row .service-card h3 {
+  text-align: center;
+}
+.service-section .row .service-card p {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+.service-section .row .service-card a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  display: inline;
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid #ff6200;
+  transition: 0.3s;
+}
+.service-section .row .service-card::before {
+  position: absolute;
+  content: "";
+  background: #ff6200;
+  width: 80px;
+  height: 80px;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 80%;
+  transition: all 0.3s;
+}
+.service-section .row .service-card:hover .icon {
+  background: #ffffff;
+  color: #ff6200;
+  border-radius: 50%;
+}
+.service-section .row .service-card:hover a {
+  border-bottom: 1.5px solid #ffffff;
+}
+.service-section .row .service-card:hover::before {
+  height: 100%;
+  width: 100%;
+  border-bottom-left-radius: 0%;
+}
+
+@media only screen and (max-width: 1240px) {
+  .service-section {
+    padding: 15px;
+  }
+  .service-section .row .service-card {
+    flex-grow: 1;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .service-section .service-title h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .service-section .service-title h2 {
+    font-size: 25px;
+  }
+}/*# sourceMappingURL=main.css.map */
